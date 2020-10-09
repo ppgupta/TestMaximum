@@ -27,4 +27,22 @@ public class FindMaxTest
 		int max = findMax.getMax(5, 4, 20);
 		assertEquals(20, max);
 	}
+	@Test
+	public void maximumDoubleAtPosition1() {
+		FindMax findMax = new FindMax();
+		double max = findMax.getMax(5.333, 4.54, 3.52);
+		assertEquals(5.333, max,.001);
+	}
+	@Test
+	public void maximumDoubleAtPosition2() {
+		FindMax findMax = new FindMax();
+		double max = findMax.getMax(5.333, 14.54, 3.52);
+		assertEquals(14.54, max,.001);
+	}
+	@Test
+	public void maximumDoubleAtPosition3() {
+		FindMax findMax = new FindMax();
+		double max = findMax.getMax(5.333, 4.54, 13.52);
+		assertEquals(13.52, max,.001);
+	}
 }
